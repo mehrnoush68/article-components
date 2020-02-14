@@ -1,19 +1,30 @@
-// set the display of the .progressbar  to none
+// ***** REFERENCES
 
-// Set the display of the .progressbar tp block
+let $win = window
+let $doc = document.documentElement  // html
+let $bar = document.querySelector('.bar')
+let $prg = document.querySelector('.progress')
+let $h1 = document.querySelector('.heading')
+let $ttl = document.querySelector('.title')
 
-// store the window height
 
-// store the document height
+// ***** STEPS
+//Get the textContent from the h1
 
-// iif documentElement height < window height
+//Set the textcontent of the .title
 
-//....else....
+//Set .little opacity to 1
 
-// How much CAN be scrolled?
+//Set .little opacity to 0
 
-// How much HAS been scrolled?
+//Get the position of the h1 relative to the window (trigger)
+let scrolledUntilH1 = window.scrollY
 
-//Determine the amount scrolled as a percentage of the total possible
 
-//Apply a width to the .progressbar
+//how much the window has scrolled
+
+//Check if the vanishing point of the h1 is less than the total scrolled
+
+//....else...
+
+//capture the scroll of the window

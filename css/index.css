@@ -2,6 +2,7 @@ body {
   font: 1em helvetica, arial, sans-serif;
   background-color: #fff;
   color: #222;
+  padding-top: 2em;
 }
 
 .story {
@@ -9,13 +10,26 @@ body {
   margin: 1em 0;
 }
 
-.progressbar {
-    background-color: red;
-    padding: 0.2em 0em;
-    display: block;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
+.bar {
+  background-color: rgba(204, 204, 204, 0.315);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2em;
+  width: 100%;
+}
 
+.progress {
+  background-color: limegreen;
+  width: 20%;
+  height: 100%;
+}
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 2;
+  padding-left: 1em;
+  opacity: 0;
+  transition: opacity 300ms;
 }
