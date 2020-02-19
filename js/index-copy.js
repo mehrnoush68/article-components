@@ -2,7 +2,7 @@
 
 let $win = window
 let $doc = document.documentElement  // html
-let $bar = document.querySelector('.progress-bar')
+let $bar = document.querySelector('.bar')
 
 
 // ***** STEPS
@@ -18,7 +18,7 @@ $win.addEventListener('scroll', event => {
 
   // if documentElement height < window height
   if ( docH <= winH ) { 
-    // Set the display of the .progress-bar to none
+    // Set the display of the .bar to none
     $bar.style.display = 'none'
   }
   else { 
