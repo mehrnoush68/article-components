@@ -52,7 +52,7 @@ $win.addEventListener('scroll', event => {
     let canBeScrolled = docH - winH
     let hasBeenScrolled = window.scrollY
     let percentScrolled = hasBeenScrolled / canBeScrolled 
-    $bar.style.width = `${percentScrolled * 100}%` 
+    $prg.style.width = `${percentScrolled * 100}%` 
     let h1position = $h1.getBoundingClientRect().top
     if (h1position < percentScrolled ) {
         $ttl.style.opacity = '1';
@@ -85,4 +85,4 @@ let allwords = $story.textContent
 // used regular expressions to remove extras
 let numberOfWords = allwords.split(/\b\S+\b/).length - 1;
 
- $Countwords.textContent = Math.round(numberOfWords / wordspermin) + `min reading time`;
+ $Countwords.textContent = Math.round(numberOfWords / wordspermin) + `min reading time `;
