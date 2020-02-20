@@ -12,7 +12,7 @@ let $ttl = document.querySelector('.title')
 // $h1.textContent
 
 //Set the textcontent of the .title
-$ttl.textContent = 'Scrolling with JS'
+$ttl.textContent = $h1.textContent
 
 //Set .title opacity to 1
 // $ttl.style.opacity = '1'
@@ -54,9 +54,10 @@ $win.addEventListener('scroll', event => {
     let h1position = $h1.getBoundingClientRect().top
     if (h1position < percentScrolled ) {
         $ttl.style.opacity = '1';
-        
+        $h1.style.opacity = '0';
     }else{
         $ttl.style.opacity = '0';
+        $h1.style.opacity = '1';
     } })
 
 

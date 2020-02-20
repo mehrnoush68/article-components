@@ -16,7 +16,7 @@ body {
   top: 0;
   left: 0;
   height: 2em;
-  width: 0%;
+  width: 100%;
 }
 
 .progress {
@@ -32,7 +32,7 @@ body {
   padding-left: 1em;
   opacity: 0;
   transition: opacity 300ms;
-  width: 10em;
-  font-size: 1.1em;
+  width: 20em;
+  font-size: 1em;
   font-weight: bold;
 }
