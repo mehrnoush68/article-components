@@ -6,6 +6,8 @@ let $bar = document.querySelector('.bar')
 let $prg = document.querySelector('.progress')
 let $h1 = document.querySelector('.heading')
 let $ttl = document.querySelector('.title')
+let $story = document.querySelector('.story')
+let $Countwords = document.querySelector('.Countwords')
 
 // ***** STEPS
 //Get the textContent from the h1
@@ -61,16 +63,26 @@ $win.addEventListener('scroll', event => {
     } })
 
 
+//117words in total we have
+//average reading words per min is 150
+const wordspermin = 150;
 
+// all texts
+let allwords = $story.textContent
 
+// we need to split all words by the spaces (it didn't worked because it was counting extra)
+//allwords = allwords.split(" ");
 
+//we can use a loop to count all the words (didn't work)
+// count = 0;
+// for (i = 0; i < allwords.length; i++) {
+//     if (allwords[i] != "") {
+//       count += 1;
+//     }
+//   }
 
+//https://regex101.com/
+// used regular expressions to remove extras
+let numberOfWords = allwords.split(/\b\S+\b/).length - 1;
 
-$win.addEventListener('scroll', event => { if ($h1.getBoundingClientRect().top < percentScrolled ) {
-    $ttl.style.opacity = '1';
-
-}else{
-    $ttl.style.opacity = '0';
-} })
-
-
+ $Countwords.textContent = Math.round(numberOfWords / wordspermin) + `min reading time`;
